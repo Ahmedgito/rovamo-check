@@ -13,11 +13,11 @@ function App() {
       <div className="bg-[#171717] text-[#E9E9E9]">
         <main className="relative">
           {/* Hero Section */}
-          <section className="relative h-screen flex flex-col md:flex-row items-center pt-24 md:pt-32">
+          <section className="relative h-screen flex items-center justify-center pt-0 md:pt-32 mb-[10%]">
             <BackgroundPaths />
-            <div className="relative z-10 w-full mx-[10%] flex flex-col md:flex-row items-start justify-between">
-              {/* Left Column - Headline and Paragraph */}
-              <div className="flex flex-col items-start justify-center">
+            <div className="relative z-10 w-full px-6 sm:px-10 md:px-[10%] flex flex-col md:flex-row items-start justify-between">
+              {/* Left Column - 70% */}
+              <div className="flex flex-col items-start justify-center w-full max-w-full md:max-w-[70%]">
                 <motion.h1 
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white mb-4 md:mb-8"
                   initial={{ opacity: 0, y: 20 }}
@@ -27,19 +27,20 @@ function App() {
                   Future-proofing businesses through design
                 </motion.h1>
                 <motion.div 
-                  className="flex items-start gap-4 md:gap-8"
+                  className="flex flex-col w-full"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
-                  <p className="text-base sm:text-lg md:text-xl font-extralight leading-relaxed text-[#E9E9E9] mt-4">
+                  <p className="text-base sm:text-lg md:text-xl font-extralight leading-relaxed text-[#E9E9E9] mt-0 md:mt-4">
                     We are a design-led technology company that builds 
                     transformative digital products and experiences. Our team combines 
                     strategy, design, and engineering to drive innovation.
                   </p>
                 </motion.div>
               </div>
+              {/* Right Column - 30% */}
+              <div className="w-full md:w-[30%]"></div>
             </div>
           </section>
 
@@ -54,20 +55,24 @@ function App() {
                     <br />
                     impact
                   </h2>
-                  <div className="flex items-start gap-4 md:gap-8">
-                    <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
+                  <motion.div 
+                    className="flex flex-col w-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
                     <p className="text-lg md:text-xl font-extralight leading-relaxed text-[#E9E9E9] max-w-xs">
                       At Rovamo, we help organizations leverage business strategy, emerging technology, and 
                       UX design to engineer entirely new ways to realize real-world, immediate value.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Services Grid - adjusted for mobile */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                   {/* Service 1 */}
-                  <div className="group">
-                    <div className="mb-16">
+                  <div className="group w-full">
+                    <div className="mb-16 w-full">
                       <RadarAnimation color="#007BC9" />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
@@ -83,8 +88,8 @@ function App() {
                   </div>
 
                   {/* Service 2 */}
-                  <div className="group">
-                    <div className="mb-16">
+                  <div className="group w-full">
+                    <div className="mb-16 w-full">
                       <RadarAnimation color="#0093D7" />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
@@ -100,8 +105,8 @@ function App() {
                   </div>
 
                   {/* Service 3 */}
-                  <div className="group">
-                    <div className="mb-16">
+                  <div className="group w-full">
+                    <div className="mb-16 w-full">
                       <RadarAnimation color="#0BBBA9" />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
@@ -129,18 +134,22 @@ function App() {
                   <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white mb-8 md:mb-16">
                     Explore our work
                   </h2>
-                  <div className="flex items-start gap-4 md:gap-8">
-                    <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
+                  <motion.div 
+                    className="flex flex-col w-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                  >
                     <p className="text-lg md:text-xl font-extralight leading-relaxed text-[#E9E9E9] max-w-xs">
                       How TM designed a next-gen navigation system for first responders to reliably find each other within multi-story buildings—without using GPS
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Work Items - adjusted spacing */}
                 <div className="space-y-16 md:space-y-32">
-                  {/* Work items - adjust text sizes and spacing */}
-                  <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+                  {/* Work Item 1 */}
+                  <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start min-h-screen">
                     <div className="w-full md:w-[35%]">
                       <div className="max-w-xl">
                         <h3 className="text-[#C62828] text-sm mb-2 md:mb-4">Project 1</h3>
@@ -168,7 +177,7 @@ function App() {
                   </div>
 
                   {/* Work Item 2 - Reversed */}
-                  <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start">
+                  <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start min-h-screen">
                     <div className="w-full md:w-[35%]">
                       <div className="max-w-xl">
                         <h3 className="text-[#0BBBA9] text-sm mb-2 md:mb-4">Project 2</h3>
@@ -196,7 +205,7 @@ function App() {
                   </div>
 
                   {/* Work Item 3 */}
-                  <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
+                  <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start min-h-screen">
                     <div className="w-full md:w-[35%]">
                       <div className="max-w-xl">
                         <h3 className="text-[#007BC9] text-sm mb-2 md:mb-4">Project 3</h3>
@@ -224,7 +233,7 @@ function App() {
                   </div>
 
                   {/* Work Item 4 - Reversed */}
-                  <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start">
+                  <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-16 items-start min-h-screen">
                     <div className="w-full md:w-[35%]">
                       <div className="max-w-xl">
                         <h3 className="text-[#0093D7] text-sm mb-2 md:mb-4">Project 4</h3>
