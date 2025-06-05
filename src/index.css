@@ -92,3 +92,49 @@
     padding: 0.5rem 0;
   }
 }
+
+.navbar-wrapper {
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.light-theme {
+  background-color: rgba(233, 233, 233, 0.8);
+  border-color: #343434;
+}
+
+.dark-theme {
+  background-color: transparent;
+  border-color: #27272a;
+}
+
+.light-theme .nav-text {
+  color: #171717;
+}
+
+.dark-theme .nav-text {
+  color: #ffffff;
+}
+
+.light-theme .nav-border {
+  border-color: #171717;
+}
+
+.dark-theme .nav-border {
+  border-color: #ffffff;
+}
+
+.light-theme .separator {
+  background-color: #343434;
+}
+
+.dark-theme .separator {
+  background-color: #27272a;
+}
+
+.light-theme .mobile-background {
+  background-color: #E9E9E9;
+}
+
+.dark-theme .mobile-background {
+  background-color: #171717;
+}
