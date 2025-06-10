@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { PageTransition } from '../components/layout/page-transition';
 import { Link, useParams } from 'react-router-dom';
 import { MagnetLines } from '../components/ui/magnet-lines';
+import Section4Testimonials from './home/section4/Section4';
 
 interface ProjectInfo {
   title: string;
@@ -147,46 +148,53 @@ function CaseStudyPage() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-[#171717] text-[#E9E9E9]">
-        <main className="relative z-0">
+        <main className="relative z-0 md:ml-14">
           {/* Hero Section */}
-          <section className="relative min-h-screen flex items-center">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0">
-              <img 
-                src={projectData.heroImage}
-                alt={projectData.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
+          {/* Hero Section */}
+          <section className="pt-32 pb-16 md:pt-40  md:pb-24 bg-[#171717]">
+            <div className="mx-[2%]">
+              <div className="px-4 md:px-[4rem] lg:px-[6rem] max-w-7xl">
+                {/* Heading */}
+                <motion.h1
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  {projectData.title}
+                </motion.h1>
 
-            {/* Content */}
-            <div className="relative z-10 w-full mx-[2%]">
-              <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <div className="max-w-4xl">
-                  <motion.h1 
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white max-w-4xl"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    {projectData.title}
-                  </motion.h1>
-                  <motion.div 
-                    className="mt-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                  >
-                    <div className="flex flex-wrap gap-4">
-                      <span className="text-[#E9E9E9]/60">{projectData.client}</span>
-                      <span className="text-[#E9E9E9]/60">•</span>
-                      <span className="text-[#E9E9E9]/60">{projectData.type}</span>
-                      <span className="text-[#E9E9E9]/60">•</span>
-                      <span className="text-[#E9E9E9]/60">{projectData.year}</span>
-                    </div>
-                  </motion.div>
-                </div>
+                {/* Sub Info */}
+                <motion.div
+                  className="mt-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <div className="flex flex-wrap gap-4 text-[#E9E9E9]/60">
+                    <span>{projectData.client}</span>
+                    <span>•</span>
+                    <span>{projectData.type}</span>
+                    <span>•</span>
+                    <span>{projectData.year}</span>
+                  </div>
+                </motion.div>
+
+                {/* Image */}
+                <motion.div
+                  className="mt-12"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  <div className="overflow-hidden rounded-xl">
+                    <img
+                      src={projectData.heroImage}
+                      alt={projectData.title}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </motion.div>
               </div>
             </div>
           </section>
@@ -217,7 +225,7 @@ function CaseStudyPage() {
                       <h2 className="text-2xl md:text-3xl font-bold mb-8">Technologies</h2>
                       <div className="flex flex-wrap gap-4">
                         {projectData.technologies.map((tech, index) => (
-                          <span 
+                          <span
                             key={index}
                             className="px-4 py-2 border border-zinc-800 rounded-full text-sm"
                           >
@@ -236,11 +244,10 @@ function CaseStudyPage() {
           <section className="py-24 md:py-32">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-                  <div className="w-full md:w-1/3">
-                    <h2 className="text-2xl md:text-3xl font-bold">Objective</h2>
-                  </div>
-                  <div className="w-full md:w-2/3">
+                <div className="flex items-start gap-4 md:gap-8">
+                  <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-8">Objective</h2>
                     <p className="text-lg md:text-xl font-light leading-relaxed">
                       {projectData.objective}
                     </p>
@@ -256,7 +263,7 @@ function CaseStudyPage() {
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="space-y-32">
                   {projectData.images.map((image, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       className="relative"
                       initial={{ opacity: 0, y: 20 }}
@@ -265,7 +272,7 @@ function CaseStudyPage() {
                       viewport={{ once: true }}
                     >
                       <div className="aspect-[16/9] overflow-hidden">
-                        <img 
+                        <img
                           src={image.src}
                           alt={image.alt}
                           className="w-full h-full object-cover"
@@ -287,19 +294,18 @@ function CaseStudyPage() {
           <section className="py-24 md:py-32">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-                  <div className="w-full md:w-1/3">
-                    <h2 className="text-2xl md:text-3xl font-bold">Results</h2>
-                  </div>
-                  <div className="w-full md:w-2/3">
-                    <ul className="space-y-4">
+                <div className="flex items-start gap-4 md:gap-8">
+                  <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-8">Results</h2>
+                    <ul className="space-y-6">
                       {projectData.results.map((result, index) => (
-                        <li 
+                        <li
                           key={index}
-                          className="text-lg md:text-xl font-light leading-relaxed flex items-center gap-4"
+                          className="text-lg md:text-xl font-light leading-relaxed flex items-start gap-4"
                         >
-                          <span className="w-2 h-2 bg-[#0093D7] rounded-full" />
-                          {result}
+                          <span className="w-2 h-2 bg-[#0093D7] rounded-full mt-2 flex-shrink-0" />
+                          <span>{result}</span>
                         </li>
                       ))}
                     </ul>
@@ -316,7 +322,7 @@ function CaseStudyPage() {
                 <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
                   {/* Left Column - Content */}
                   <div className="w-full md:w-3/5">
-                    <motion.h2 
+                    <motion.h2
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -337,7 +343,7 @@ function CaseStudyPage() {
                         <p className="text-lg md:text-xl font-extralight text-[#E9E9E9]">
                           Let's discuss how we can help transform your business through innovative design and technology solutions.
                         </p>
-                        <Link 
+                        <Link
                           to="/contact"
                           className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-[#0BBBA9] hover:bg-[#0BBBA9]/90 transition-colors rounded-full group"
                         >
@@ -350,7 +356,7 @@ function CaseStudyPage() {
 
                   {/* Right Column - MagnetLines */}
                   <div className="w-full md:w-2/5 mt-8 md:mt-0">
-                    <MagnetLines 
+                    <MagnetLines
                       rows={6}
                       columns={6}
                       containerSize="100%"
@@ -367,10 +373,10 @@ function CaseStudyPage() {
           </section>
 
           {/* Next Project CTA */}
-          <section className="py-24 md:py-32 border-t border-zinc-800">
+          <section className="py-24 md:py-20">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <Link 
+                <Link
                   to="/work/next-project"
                   className="group inline-flex items-center gap-4 text-2xl md:text-3xl font-bold hover:text-[#0093D7] transition-colors"
                 >
@@ -381,9 +387,11 @@ function CaseStudyPage() {
             </div>
           </section>
 
-          {/* Footer */}
-          {/* ... Same footer as work page ... */}
+
         </main>
+
+        {/* Footer */}
+        <Section4Testimonials />
       </div>
     </PageTransition>
   );

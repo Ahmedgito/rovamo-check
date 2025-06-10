@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -98,7 +100,7 @@
 }
 
 .light-theme {
-  background-color: rgba(233, 233, 233, 0.8);
+  background-color: #E9E9E9;
   border-color: #343434;
 }
 

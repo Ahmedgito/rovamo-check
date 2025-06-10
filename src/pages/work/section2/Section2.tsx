@@ -1,30 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Section3Work: React.FC = () => {
+const Section2Work: React.FC = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isNavigating, setIsNavigating] = useState(false);
-  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0, width: 0, height: 0 });
-  const imageRef = useRef<HTMLImageElement>(null);
 
   const handleCaseStudyClick = (path: string, imageUrl: string, e: React.MouseEvent) => {
     e.preventDefault();
     if (isNavigating) return;
-
-    // Get the clicked image's position and dimensions
-    const clickedImage = e.currentTarget.closest('.work-item')?.querySelector('img');
-    if (clickedImage) {
-      const rect = clickedImage.getBoundingClientRect();
-      setImagePosition({
-        x: rect.left,
-        y: rect.top,
-        width: rect.width,
-        height: rect.height
-      });
-    }
     
     setSelectedImage(imageUrl);
     setIsNavigating(true);
@@ -36,18 +22,82 @@ const Section3Work: React.FC = () => {
       setTimeout(() => {
         setSelectedImage(null);
         setIsNavigating(false);
-      }, 1200);
+      }, 1000);
     }, 1200);
+  };
+
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    },
+    exit: { 
+      opacity: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
+
+  const containerVariants = {
+    hidden: { 
+      scale: 1,
+      opacity: 0.8
+    },
+    visible: { 
+      scale: 1.2,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    },
+    exit: { 
+      scale: 0.8,
+      opacity: 0,
+      transition: {
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { 
+      scale: 1,
+      filter: "brightness(1)"
+    },
+    visible: { 
+      scale: 1.5,
+      filter: "brightness(1.1)",
+      transition: {
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    },
+    exit: { 
+      scale: 0.5,
+      filter: "brightness(0.8)",
+      transition: {
+        duration: 1.2,
+        ease: [0.16, 1, 0.3, 1]
+      }
+    }
   };
 
   return (
     <>
       {/* Featured Work Section - adjusted spacing */}
-      <section id="work" className="py-10 font-schibsted md:ml-11 md:py-48">
+      <section id="work" className="py-44 font-schibsted md:ml-11 md:py-48">
         <div className="mx-[10%]">
           <div>
             {/* Section Header */}
-            <div className="mb-3 md:mb-3">
+            <div className="mb-3  md:mb-3">
               {/* Top Heading */}
               <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[84px] font-bold leading-none text-blackPage.text">
                 Explore <br /> our work
@@ -74,7 +124,7 @@ const Section3Work: React.FC = () => {
             {/* Work Items - adjusted spacing */}
             <div className="space-y-16 md:space-y-32">
               {/* Work Item 1 */}
-              <div className="work-item flex flex-col md:flex-row gap-8 md:gap-x-16 items-end mt-28">
+              <div className="flex flex-col md:flex-row gap-8 md:gap-x-16 items-end mt-28">
                 <div className="w-full md:w-[35%]">
                   <div className="max-w-xl">
 
@@ -224,7 +274,7 @@ const Section3Work: React.FC = () => {
       </section>
 
       {/* Enhanced Zoom Animation Overlay */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -235,42 +285,17 @@ const Section3Work: React.FC = () => {
             style={{ pointerEvents: 'none' }}
           >
             <motion.img
-              ref={imageRef}
               src={selectedImage}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
-              initial={{
-                transform: `translate(${imagePosition.x}px, ${imagePosition.y}px)`,
-                width: imagePosition.width,
-                height: imagePosition.height
-              }}
-              animate={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '90vw',
-                height: '90vh'
-              }}
-              exit={{
-                transform: `translate(${imagePosition.x}px, ${imagePosition.y}px)`,
-                width: imagePosition.width,
-                height: imagePosition.height,
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
+              initial={{ scale: 1 }}
+              animate={{ scale: 1.5 }}
+              exit={{ scale: 0.5 }}
               transition={{
                 type: "spring",
                 stiffness: 100,
                 damping: 20,
-                mass: 1,
-                duration: 1.2
+                mass: 1
               }}
-              className="object-contain"
+              className="max-w-[90%] max-h-[90vh] object-contain"
             />
           </motion.div>
         )}
@@ -279,4 +304,4 @@ const Section3Work: React.FC = () => {
   );
 };
 
-export default Section3Work;
+export default Section2Work;
