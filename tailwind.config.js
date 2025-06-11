@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         schibsted: ['"Schibsted Grotesk"', 'sans-serif'],
+        hanken: ['"Hanken Grotesk"', 'sans-serif'],
       },
       colors: {
         blackPage: {

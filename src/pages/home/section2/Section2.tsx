@@ -33,7 +33,7 @@ const Section2Services: React.FC = () => (
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <p className="text-lg md:text-lg font-thin leading-relaxed text-[#E9E9E9]">
+                <p className="text-lg font-hanken md:text-lg font-light leading-relaxed text-[#E9E9E9]">
                   We help organizations leverage business strategy, emerging technology, and UX design to engineer entirely new ways to realize real-world, immediate value. Our clients span healthcare, cybersecurity, transportation, government, enterprise applications, financial services, consumer products, and other industries. Whether a pre-launch startup or a modernizing institution—organizations we work with are looking to reimagine themselves through emerging technology as a way to take control of their future and growth.
                 </p>
               </motion.div>
@@ -51,7 +51,7 @@ const Section2Services: React.FC = () => (
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                 Take new businesses from Zero to 1
               </h3>
-              <p className="text-base md:text-lg font-extralight text-[#E9E9E9] mb-6">
+              <p className="text-base font-hanken md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Leading startups through the process of designing and launching a new product.
               </p>
               <a href="#" className="inline-flex items-center text-[#007BC9] group-hover:text-[#0093D7] transition-colors">
@@ -68,7 +68,7 @@ const Section2Services: React.FC = () => (
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                 Reimagine an existing product for scale
               </h3>
-              <p className="text-base md:text-lg font-extralight text-[#E9E9E9] mb-6">
+              <p className="text-base font-hanken md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Kickstarting growth through fully rearchitecting a design experience.
               </p>
               <a href="#" className="inline-flex items-center text-[#0093D7] group-hover:text-[#0BBBA9] transition-colors">
@@ -85,7 +85,7 @@ const Section2Services: React.FC = () => (
               <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
                 Innovate within an institution
               </h3>
-              <p className="text-base md:text-lg font-extralight text-[#E9E9E9] mb-6">
+              <p className="text-base font-hanken md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Guiding the design of strategic initiatives within established businesses looking to modernize.
               </p>
               <a href="#" className="inline-flex items-center text-[#0BBBA9] group-hover:text-[#C62828] transition-colors">

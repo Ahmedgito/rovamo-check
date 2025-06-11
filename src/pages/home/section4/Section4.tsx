@@ -17,14 +17,14 @@ const Section4Testimonials: React.FC = () => (
           <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32" {...fadeInUp}>
             {/* Left Column - Newsletter */}
             <motion.div {...fadeInUp}>
-              <motion.h3 className="text-2xl font-light mb-8" {...fadeInUp}>
+              <motion.h3 className="text-2xl  font-light mb-8" {...fadeInUp}>
                 Sign up for our newsletter
               </motion.h3>
               <motion.div className="relative max-w-md" {...fadeInUp}>
                 <motion.input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full bg-transparent border-b border-zinc-800 py-2 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors"
+                  className="w-full font-hanken font-light bg-transparent border-b border-zinc-800 py-2 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-white transition-colors"
                   {...fadeInUp}
                 />
                 <motion.button className="absolute right-0 top-2 -translate-y-1/2" {...fadeInUp}>
@@ -33,12 +33,12 @@ const Section4Testimonials: React.FC = () => (
               </motion.div>
 
               {/* Address */}
-              <motion.div className="mt-32" {...fadeInUp}>
+              <motion.div className="mt-32 font-hanken font-light" {...fadeInUp}>
                 <motion.p className="text-[#E9E9E9] mb-2" {...fadeInUp}>3579 17th St</motion.p>
                 <motion.p className="text-[#E9E9E9] mb-6" {...fadeInUp}>San Francisco, CA 94110</motion.p>
                 <motion.a
                   href="#directions"
-                  className="text-white hover:text-[#0093D7] transition-colors"
+                  className="text-white font-bold hover:text-[#0093D7] transition-colors"
                   {...fadeInUp}
                 >
                   Get directions
@@ -66,7 +66,7 @@ const Section4Testimonials: React.FC = () => (
 
           {/* Bottom Bar */}
           <motion.div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-16 md:mt-32 pt-8 border-t border-zinc-800" {...fadeInUp}>
-            <motion.p className="text-sm text-[#E9E9E9]" {...fadeInUp}>
+            <motion.p className="text-sm font-hanken font-light font-hanken text-[#E9E9E9]" {...fadeInUp}>
               © Rovamo 2024. All rights reserved.
             </motion.p>
             <motion.a

@@ -86,7 +86,7 @@ const Section3Work: React.FC = () => {
                     <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
                       Safeguarding first responders with next-level location services
                     </h4>
-                    <p className="text-lg md:text-lg font-[300] text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg font-hanken md:text-lg font-[300] text-[#E9E9E9] mb-6 md:mb-8">
                       How TM designed a next-gen navigation system for first responders to reliably find each other within multi-story buildings—without using GPS
                     </p>
                     <button 
@@ -122,7 +122,7 @@ const Section3Work: React.FC = () => {
                     <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
                       Reimagining emergency response for the digital age
                     </h4>
-                    <p className="text-lg md:text-lg font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Designing a next-generation platform that helps emergency teams coordinate and respond faster in critical situations
                     </p>
                     <button 
@@ -159,7 +159,7 @@ const Section3Work: React.FC = () => {
                     <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
                       Building the future of digital healthcare
                     </h4>
-                    <p className="text-lg md:text-lg font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Creating an intuitive telehealth platform that connects patients with healthcare providers seamlessly
                     </p>
                     <button 
@@ -196,7 +196,7 @@ const Section3Work: React.FC = () => {
                     <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
                       Revolutionizing fintech user experience
                     </h4>
-                    <p className="text-lg md:text-lg font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Developing an innovative financial platform that simplifies complex transactions for both consumers and businesses
                     </p>
                     <button 

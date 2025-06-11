@@ -4,14 +4,14 @@ import { BackgroundPaths } from "../../../components/ui/background-paths";
 import Spline from '@splinetool/react-spline';
 
 const Section1Hero: React.FC = () => (
-  <section className="relative min-h-[60vh] md:h-screen font-schibsted pt-20 md:pt-72 mb-20">
+  <section className="relative min-h-[60vh] md:h-screen font-schibsted  pt-20 md:pt-72 mb-20">
     <BackgroundPaths />
 
     {/* Desktop Version (md and up) */}
     <div className="hidden md:flex relative z-10 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between h-full">
       <div className="flex flex-col items-start md:ml-10 justify-center w-full max-w-full md:max-w-[50%]">
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold leading-tight tracking-tight text-white mb-4 md:mb-8"
+          className="text-4xl font-schibsted sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold leading-tight tracking-tight text-white mb-4 md:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -24,7 +24,7 @@ const Section1Hero: React.FC = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-base sm:text-lg md:text-xl font-extralight leading-relaxed text-[#E9E9E9] mt-0 md:mt-4">
+          <p className="text-base sm:text-lg md:text-xl font-hanken font-extralight leading-relaxed text-[#E9E9E9] mt-0 md:mt-4">
             We are a design-led technology company...
           </p>
         </motion.div>
@@ -57,12 +57,12 @@ const Section1Hero: React.FC = () => (
           through design
         </motion.h1>
         <motion.div
-          className="mb-8"
+          className="mb-8 font-hanken"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-base sm:text-lg font-extralight leading-relaxed text-[#E9E9E9]">
+          <p className="text-base font-hanken  sm:text-lg font-light leading-relaxed text-[#E9E9E9]">
             We are a design-led technology company...
           </p>
         </motion.div>
