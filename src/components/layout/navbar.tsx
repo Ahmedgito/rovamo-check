@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
                   to={item.path}
                   className={`group ml-20 relative text-base ${navTextColor} hover:text-[#b7b9b9] transition-colors`}
                 >
-                  <span className="text-xs block" style={{ color: item.color }}>
+                  <span className="text-xs font-hanken font-extralight block" style={{ color: item.color }}>
                     0{index + 1}.
                   </span>
                   <span>{item.label}</span>
