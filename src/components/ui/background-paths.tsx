@@ -14,7 +14,7 @@ function FloatingPaths({ position }: { position: number }) {
     }));
 
     return (
-        <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none">
 
             <svg
                 className="w-full h-full text-gray-300"

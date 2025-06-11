@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { BackgroundPaths } from "../../../components/ui/background-paths";
 
 const Section1Service: React.FC = () => (
-    <section className="block min-h-screen z-20 md:h-screen py-64 md:pt-72 mb-20 bg-[#E9E9E9]">
+    <section className="block min-h-[10vh] z-20 md:h-screen py-64 md:pt-72  bg-[#E9E9E9]">
         <BackgroundPaths />
 
         {/* Desktop Version (md and up) */}

@@ -4,7 +4,7 @@ import { BackgroundPaths } from "../../../components/ui/background-paths";
 import Spline from '@splinetool/react-spline';
 
 const Section1Hero: React.FC = () => (
-  <section className="relative min-h-[100vh] md:h-screen font-schibsted  pt-20 md:pt-72 mb-20">
+  <section className="relative min-h-[100vh] md:h-screen  font-schibsted  pt-20 md:pt-72 mb-20">
     <BackgroundPaths />
 
     {/* Desktop Version (md and up) */}
@@ -44,7 +44,7 @@ const Section1Hero: React.FC = () => (
     </div>
 
     {/* Mobile Version (below md) */}
-    <div className="md:hidden flex flex-col px-6 sm:px-10 relative z-10 min-h-[60vh]">
+    <div className="md:hidden flex flex-col px-6 sm:px-10 relative z-10 min-h-[60vh] mb-12">
       <div className="flex-1 flex flex-col justify-center">
         <motion.h1
           className="text-5xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4"
@@ -62,11 +62,10 @@ const Section1Hero: React.FC = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-base font-hanken  sm:text-lg font-light leading-relaxed text-[#E9E9E9]">
+          <p className="text-base font-hanken sm:text-lg font-light leading-relaxed text-[#E9E9E9]">
             We are a design-led technology company...
           </p>
         </motion.div>
-        
       </div>
     </div>
   </section>
