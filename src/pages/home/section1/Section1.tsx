@@ -4,7 +4,7 @@ import { BackgroundPaths } from "../../../components/ui/background-paths";
 import Spline from '@splinetool/react-spline';
 
 const Section1Hero: React.FC = () => (
-  <section className="relative min-h-[60vh] md:h-screen font-schibsted  pt-20 md:pt-72 mb-20">
+  <section className="relative min-h-[100vh] md:h-screen font-schibsted  pt-20 md:pt-72 mb-20">
     <BackgroundPaths />
 
     {/* Desktop Version (md and up) */}
