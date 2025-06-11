@@ -47,7 +47,7 @@ const Section1Hero: React.FC = () => (
     <div className="md:hidden flex flex-col px-6 sm:px-10 relative z-10 min-h-[60vh]">
       <div className="flex-1 flex flex-col justify-center">
         <motion.h1
-          className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4"
+          className="text-5xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
