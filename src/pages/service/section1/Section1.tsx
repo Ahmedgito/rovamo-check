@@ -7,8 +7,8 @@ const Section1Service: React.FC = () => (
         <BackgroundPaths />
 
         {/* Desktop Version (md and up) */}
-        <div className="hidden md:flex relative z-10 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between">
-            <div className="flex flex-col items-start md:ml-10 justify-center w-full max-w-full md:max-w-[70%]">
+        <div className="hidden md:flex relative z-10  w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between">
+            <div className="flex flex-col items-start  md:ml-10 justify-center w-full max-w-full md:max-w-[70%]">
                 <motion.h1
                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-bold leading-tight tracking-tight text-black mb-4 md:mb-8"
                     initial={{ opacity: 0, y: 20 }}
@@ -28,6 +28,7 @@ const Section1Service: React.FC = () => (
                     </p>
                 </motion.div>
             </div>
+
         </div>
 
         {/* Mobile Version (below md) */}
@@ -50,13 +51,13 @@ const Section1Service: React.FC = () => (
             </motion.p>
         </div>
 
-        {/* Service Categories Grid - Always visible */}
-        <div className="w-full max-w-4xl mx-auto mt-20 px-2 sm:px-4 md:px-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-y-12 gap-x-0 ">
-                {/* Research */}
-                <div className="flex flex-col items-start md:items-start text-left md:text-left px-2 sm:px-4">
+        {/* Service Categories Grid1 - Always visible */}
+        <div className="w-full px-6 sm:px-10 md:px-[12%] mt-12 md:mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 grid-flow-col-dense gap-y-10 md:gap-y-12 gap-x-0 ">
+                {/* Research */}<div className="flex flex-col items-start text-left">
+
                     {/* Icon: Magnifying Glass */}
-                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><circle cx="18" cy="18" r="10" strokeDasharray="4 2"/><line x1="28" y1="28" x2="36" y2="36"/></svg>
+                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><circle cx="18" cy="18" r="10" strokeDasharray="4 2" /><line x1="28" y1="28" x2="36" y2="36" /></svg>
                     <h3 className="text-lg md:text-xl font-bold mb-2 text-black">Research</h3>
                     <ul className="text-sm md:text-base text-[#171717] font-light space-y-1">
                         <li>· Qualitative and quantitative user research</li>
@@ -65,9 +66,10 @@ const Section1Service: React.FC = () => (
                     </ul>
                 </div>
                 {/* Strategy */}
-                <div className="flex flex-col items-start md:items-start text-left md:text-left px-2 sm:px-4">
+                <div className="flex flex-col items-start text-left">
+
                     {/* Icon: Target */}
-                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><circle cx="20" cy="20" r="12" strokeDasharray="4 2"/><circle cx="20" cy="20" r="4"/><line x1="20" y1="8" x2="20" y2="4"/><line x1="20" y1="32" x2="20" y2="36"/><line x1="8" y1="20" x2="4" y2="20"/><line x1="32" y1="20" x2="36" y2="20"/></svg>
+                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><circle cx="20" cy="20" r="12" strokeDasharray="4 2" /><circle cx="20" cy="20" r="4" /><line x1="20" y1="8" x2="20" y2="4" /><line x1="20" y1="32" x2="20" y2="36" /><line x1="8" y1="20" x2="4" y2="20" /><line x1="32" y1="20" x2="36" y2="20" /></svg>
                     <h3 className="text-lg md:text-xl font-bold mb-2 text-black">Strategy</h3>
                     <ul className="text-sm md:text-base text-[#171717] font-light space-y-1">
                         <li>· Product strategy</li>
@@ -75,10 +77,21 @@ const Section1Service: React.FC = () => (
                         <li>· Systems design</li>
                     </ul>
                 </div>
+
+            </div>
+        </div>
+
+                {/* Service Categories Grid2 - Always visible */}
+        <div className="w-full px-6 sm:px-10 md:px-[12%] mt-12 md:mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 grid-flow-col gap-y-10 md:gap-y-12 gap-x-0 ">
+  
+
                 {/* Product Design */}
-                <div className="flex flex-col items-start md:items-start text-left md:text-left px-2 sm:px-4">
+
+                <div className="flex flex-col items-start text-left">
+
                     {/* Icon: Layers */}
-                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><polygon points="10,20 20,10 30,20 20,30 10,20" strokeDasharray="4 2"/><polygon points="12,22 20,14 28,22 20,30 12,22"/></svg>
+                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><polygon points="10,20 20,10 30,20 20,30 10,20" strokeDasharray="4 2" /><polygon points="12,22 20,14 28,22 20,30 12,22" /></svg>
                     <h3 className="text-lg md:text-xl font-bold mb-2 text-black">Product design</h3>
                     <ul className="text-sm md:text-base text-[#171717] font-light space-y-1">
                         <li>· Platform architecture</li>
@@ -86,10 +99,13 @@ const Section1Service: React.FC = () => (
                         <li>· Customer experience design</li>
                     </ul>
                 </div>
+
                 {/* Visual Design */}
-                <div className="flex flex-col items-start md:items-start text-left md:text-left px-2 sm:px-4">
+                
+                <div className="flex flex-col items-start text-left">
+
                     {/* Icon: Hexagon */}
-                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><polygon points="20,6 34,14 34,30 20,38 6,30 6,14 20,6" strokeDasharray="4 2"/><polygon points="20,10 30,16 30,28 20,34 10,28 10,16 20,10"/></svg>
+                    <svg width="36" height="36" fill="none" stroke="#171717" strokeWidth="2" className="mb-3 md:mb-4"><polygon points="20,6 34,14 34,30 20,38 6,30 6,14 20,6" strokeDasharray="4 2" /><polygon points="20,10 30,16 30,28 20,34 10,28 10,16 20,10" /></svg>
                     <h3 className="text-lg md:text-xl font-bold mb-2 text-black">Visual design</h3>
                     <ul className="text-sm md:text-base text-[#171717] font-light space-y-1">
                         <li>· Data visualization</li>
@@ -99,6 +115,12 @@ const Section1Service: React.FC = () => (
                 </div>
             </div>
         </div>
+
+
+        
+
+
+
     </section>
 );
 
