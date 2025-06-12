@@ -143,6 +143,11 @@ const projectsData: ProjectsData = {
 
 function CaseStudyPage() {
   const { projectId } = useParams();
+  const projectKeys = Object.keys(projectsData);
+  const currentIndex = projectId ? projectKeys.indexOf(projectId) : 0;
+  const nextIndex = (currentIndex + 1) % projectKeys.length;
+  const nextProjectKey = projectKeys[nextIndex];
+  const nextProject = projectsData[nextProjectKey];
   const projectData = projectsData[projectId || ''] || projectsData.nextnav;
 
   return (
@@ -200,7 +205,7 @@ function CaseStudyPage() {
           </section>
 
           {/* Project Info Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-24 md:py-10">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 border-t border-zinc-800 pt-8">
@@ -241,7 +246,7 @@ function CaseStudyPage() {
           </section>
 
           {/* Objective Section */}
-          <section className="py-5 md:py-5">
+          <section className="py-5 md:py-10">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="flex items-start gap-4 md:gap-8">
@@ -315,6 +320,65 @@ function CaseStudyPage() {
             </div>
           </section>
 
+          {/* Mission-Critical CTA Section (New) */}
+          <section className="py-24 md:py-20">
+            <div className="mx-[2%]">
+              <div className="px-8 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+                  {/* Left Grid */}
+                  <div className="flex flex-col items-start">
+                    <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-3xl mr-10 font-bold text-white mb-8">
+                      Have a mission-critical problem that needs solving?
+                    </h2>
+
+                    <Link
+                      to="/contact"
+                      className={`md:inline-flex hidden items-center gap-3 text-base  group`}
+                    >
+                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                        <ArrowRight className="w-4 h-4 text-black" />
+                      </div>
+                      <span>Contact Us</span>
+                     
+                    </Link>
+
+                  </div>
+                  {/* Right Grid */}
+                  <div className="flex flex-col items-start w-full">
+                    <h2 className="text-[4rem] md:text-[4rem] lg:text-[5rem] font-extrabold leading-none text-white mb-4" style={{ lineHeight: 1 }}>See more</h2>
+                    <div className="relative w-[80%]  bg-transparent">
+                      <img
+                        src={nextProject.heroImage}
+                        alt={nextProject.title}
+                        className="w-[70%] h-[50%] aspect-[12/16] object-cover"
+                      />
+                      <div className="absolute bottom-0 md:-right-20 bg-transparent p-8 rounded-tl-2xl flex flex-col w-[50%] min-w-[220px]">
+                        <Link to={`/work/${nextProjectKey}`} className="text-[#FF3B3B] items-end text-2xl font-bold mb-2 hover:underline">{nextProject.client}</Link>
+                        <p className="text-white text-lg mb-2 leading-snug">{nextProject.title}</p>
+                        <Link to={`/work/${nextProjectKey}`} className="text-white font-bold hover:underline text-base mt-2">Read case study</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+                    {/* Next Project CTA */}
+            {/* <section className="py-24 md:py-20">
+            <div className="mx-[2%]">
+              <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
+                <Link
+                  to="/work/next-project"
+                  className="group inline-flex items-center gap-4 text-2xl md:text-3xl font-bold hover:text-[#0093D7] transition-colors"
+                >
+                  <span>Next Project</span>
+                  <ArrowRight className="w-8 h-8 transform group-hover:translate-x-2 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </section> */}
+
           {/* CTA Section */}
           <section className="py-24 md:py-32">
             <div className="mx-[2%]">
@@ -368,21 +432,6 @@ function CaseStudyPage() {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Next Project CTA */}
-          <section className="py-24 md:py-20">
-            <div className="mx-[2%]">
-              <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <Link
-                  to="/work/next-project"
-                  className="group inline-flex items-center gap-4 text-2xl md:text-3xl font-bold hover:text-[#0093D7] transition-colors"
-                >
-                  <span>Next Project</span>
-                  <ArrowRight className="w-8 h-8 transform group-hover:translate-x-2 transition-transform" />
-                </Link>
               </div>
             </div>
           </section>
