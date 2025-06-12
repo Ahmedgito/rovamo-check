@@ -100,10 +100,9 @@
 }
 
 .light-theme {
-  background-color: #E9E9E9;
+  background-color: transparent;
   border-color: #343434;
 }
-
 .dark-theme {
   background-color: transparent;
   border-color: #27272a;
@@ -139,4 +138,9 @@
 
 .dark-theme .mobile-background {
   background-color: #171717;
+}
+
+/* Add dark mode background for main content */
+.dark-theme {
+  background-color: transparent;
 }

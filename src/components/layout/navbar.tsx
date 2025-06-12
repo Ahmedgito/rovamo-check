@@ -41,14 +41,14 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center  space-x-10">
+            <nav className="hidden md:flex font-manrope font-[300] items-center  space-x-10">
               {navItems.map((item, index) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   className={`group ml-20 relative text-base ${navTextColor} hover:text-[#b7b9b9] transition-colors`}
                 >
-                  <span className="text-xs font-hanken font-extralight block" style={{ color: item.color }}>
+                  <span className="text-xs font-manrope font-extralight block" style={{ color: item.color }}>
                     0{index + 1}.
                   </span>
                   <span>{item.label}</span>

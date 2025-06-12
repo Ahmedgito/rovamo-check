@@ -10,7 +10,7 @@ import Section2Work from './section2/Section2';
 
 function WorkPage() {
   return (
-      <main className="bg-[#0f0f0f] text-white">
+      <main className="bg-[#171717] text-white">
       
       <Section2Work/>
       <Section4Testimonials />

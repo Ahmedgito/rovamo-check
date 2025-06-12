@@ -6,7 +6,7 @@ import Section4Testimonials from "./section4/Section4";
 
 const Home: React.FC = () => {
   return (
-    <main className="bg-[#0f0f0f] text-white">
+    <main className="bg-[#171717] text-white">
       <Section1Hero />
       <Section2Agencies />
       <Section3Work />

@@ -45,7 +45,7 @@ const Section2Services: React.FC = () => (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {/* Service 1 */}
             <div className="group w-full">
-              <div className="mb-16 w-full">
+              <div className="mb-16 w-full flex justify-center items-center">
                 <RadarAnimation color="#007BC9" />
               </div>
               <h3 className="text-xl md:text-2xl  font-[300] text-white mb-4">
@@ -54,7 +54,7 @@ const Section2Services: React.FC = () => (
               <p className="text-base font-manrope md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Leading startups through the process of designing and launching a new product.
               </p>
-              <a href="#" className="inline-flex items-center text-[#007BC9] group-hover:text-[#0093D7] transition-colors">
+              <a href="#" className="inline-flex mt-5 items-center text-[#E9E9E9] group-hover:text-[#C62828] transition-colors">
                 <span className="mr-2">Learn more</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </a>
@@ -62,7 +62,7 @@ const Section2Services: React.FC = () => (
 
             {/* Service 2 */}
             <div className="group w-full">
-              <div className="mb-16 w-full">
+              <div className="mb-16 w-full flex justify-center items-center">
                 <RadarAnimation color="#0093D7" />
               </div>
               <h3 className="text-xl md:text-2xl font-[300] text-white mb-4">
@@ -71,15 +71,11 @@ const Section2Services: React.FC = () => (
               <p className="text-base font-manrope md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Kickstarting growth through fully rearchitecting a design experience.
               </p>
-              <a href="#" className="inline-flex items-center text-[#0093D7] group-hover:text-[#0BBBA9] transition-colors">
-                <span className="mr-2">Learn more</span>
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </a>
             </div>
 
             {/* Service 3 */}
             <div className="group w-full">
-              <div className="mb-16 w-full">
+              <div className="mb-16 w-full flex justify-center items-center">
                 <RadarAnimation color="#0BBBA9" />
               </div>
               <h3 className="text-xl md:text-2xl font-[300] text-white mb-4">
@@ -88,10 +84,6 @@ const Section2Services: React.FC = () => (
               <p className="text-base font-manrope md:text-lg font-extralight text-[#E9E9E9] mb-6">
                 Guiding the design of strategic initiatives within established businesses looking to modernize.
               </p>
-              <a href="#" className="inline-flex items-center text-[#0BBBA9] group-hover:text-[#C62828] transition-colors">
-                <span className="mr-2">Learn more</span>
-                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-              </a>
             </div>
           </div>
         </div>
