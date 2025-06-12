@@ -1,43 +1,23 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Section3Work: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isNavigating, setIsNavigating] = useState(false);
-  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0, width: 0, height: 0 });
-  const imageRef = useRef<HTMLImageElement>(null);
 
-  const handleCaseStudyClick = (path: string, imageUrl: string, e: React.MouseEvent) => {
+  const handleCaseStudyClick = (path: string, e: React.MouseEvent) => {
     e.preventDefault();
     if (isNavigating) return;
-
-    // Get the clicked image's position and dimensions
-    const clickedImage = e.currentTarget.closest('.work-item')?.querySelector('img');
-    if (clickedImage) {
-      const rect = clickedImage.getBoundingClientRect();
-      setImagePosition({
-        x: rect.left,
-        y: rect.top,
-        width: rect.width,
-        height: rect.height
-      });
-    }
     
-    setSelectedImage(imageUrl);
     setIsNavigating(true);
+    navigate(path);
     
-    // Start zoom animation
+    // Reset navigation state after a short delay
     setTimeout(() => {
-      navigate(path);
-      // Reset states after navigation
-      setTimeout(() => {
-        setSelectedImage(null);
-        setIsNavigating(false);
-      }, 1200);
-    }, 1200);
+      setIsNavigating(false);
+    }, 500);
   };
 
   return (
@@ -90,7 +70,7 @@ const Section3Work: React.FC = () => {
                       How TM designed a next-gen navigation system for first responders to reliably find each other within multi-story buildings—without using GPS
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/nextnav', 'https://images.unsplash.com/photo-1559028012-481c04fa702d', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/nextnav', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -126,7 +106,7 @@ const Section3Work: React.FC = () => {
                       Designing a next-generation platform that helps emergency teams coordinate and respond faster in critical situations
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/emergency', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/emergency', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -163,7 +143,7 @@ const Section3Work: React.FC = () => {
                       Creating an intuitive telehealth platform that connects patients with healthcare providers seamlessly
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/healthcare', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/healthcare', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -200,7 +180,7 @@ const Section3Work: React.FC = () => {
                       Developing an innovative financial platform that simplifies complex transactions for both consumers and businesses
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/fintech', 'https://images.unsplash.com/photo-1563986768609-322da13575f3', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/fintech', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -222,59 +202,6 @@ const Section3Work: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Enhanced Zoom Animation Overlay */}
-      <AnimatePresence mode="wait">
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-            style={{ pointerEvents: 'none' }}
-          >
-            <motion.img
-              ref={imageRef}
-              src={selectedImage}
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
-              initial={{
-                transform: `translate(${imagePosition.x}px, ${imagePosition.y}px)`,
-                width: imagePosition.width,
-                height: imagePosition.height
-              }}
-              animate={{
-                position: 'fixed',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '90vw',
-                height: '90vh'
-              }}
-              exit={{
-                transform: `translate(${imagePosition.x}px, ${imagePosition.y}px)`,
-                width: imagePosition.width,
-                height: imagePosition.height,
-                position: 'absolute',
-                top: 0,
-                left: 0
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 20,
-                mass: 1,
-                duration: 1.2
-              }}
-              className="object-contain"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };

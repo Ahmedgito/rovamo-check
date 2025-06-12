@@ -18,6 +18,7 @@ export const Navbar: React.FC = () => {
 
   const navTextColor = isLightTheme ? 'text-black' : 'text-white';
   const navAccentColor = isLightTheme ? '#000' : '#fff';
+  const hoverColor = isLightTheme ? 'hover:text-[#333333]' : 'hover:text-[#b7b9b9]';
 
   const navItems: NavItem[] = [
     { label: 'Home', path: '/', color: navAccentColor },
@@ -35,20 +36,20 @@ export const Navbar: React.FC = () => {
           <div className="flex items-center flex-grow space-x-8">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 md:w-12 md:h-12 border-2 rounded-full flex items-center justify-center hover:border-[#b7b9b9] transition-colors nav-border">
+              <div className="w-10 h-10 md:w-12 md:h-12 border-2 rounded-full flex items-center justify-center hover:border-[#333333] transition-colors nav-border">
                 <span className="text-xl font-bold nav-text">R</span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex font-manrope font-[300] items-center  space-x-10">
+            <nav className="hidden md:flex items-center space-x-10">
               {navItems.map((item, index) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`group ml-20 relative text-base ${navTextColor} hover:text-[#b7b9b9] transition-colors`}
+                  className={`group ml-20 relative text-base ${navTextColor} ${hoverColor} transition-colors`}
                 >
-                  <span className="text-xs font-manrope font-extralight block" style={{ color: item.color }}>
+                  <span className="text-xs block" style={{ color: item.color }}>
                     0{index + 1}.
                   </span>
                   <span>{item.label}</span>
@@ -67,7 +68,7 @@ export const Navbar: React.FC = () => {
           <Link
             to="/contact"
             onClick={() => setIsOpen(false)}
-            className={`md:inline-flex hidden items-center gap-3 text-base ${navTextColor} hover:text-[#b7b9b9] group`}
+            className={`md:inline-flex hidden items-center gap-3 text-base ${navTextColor} ${hoverColor} group`}
           >
             <span>Contact</span>
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">

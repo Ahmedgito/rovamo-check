@@ -1,93 +1,23 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Section2Work: React.FC = () => {
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isNavigating, setIsNavigating] = useState(false);
 
-  const handleCaseStudyClick = (path: string, imageUrl: string, e: React.MouseEvent) => {
+  const handleCaseStudyClick = (path: string, e: React.MouseEvent) => {
     e.preventDefault();
     if (isNavigating) return;
     
-    setSelectedImage(imageUrl);
     setIsNavigating(true);
+    navigate(path);
     
-    // Start zoom animation
+    // Reset navigation state after a short delay
     setTimeout(() => {
-      navigate(path);
-      // Reset states after navigation
-      setTimeout(() => {
-        setSelectedImage(null);
-        setIsNavigating(false);
-      }, 1000);
-    }, 1200);
-  };
-
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    },
-    exit: { 
-      opacity: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
-
-  const containerVariants = {
-    hidden: { 
-      scale: 1,
-      opacity: 0.8
-    },
-    visible: { 
-      scale: 1.2,
-      opacity: 1,
-      transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    },
-    exit: { 
-      scale: 0.8,
-      opacity: 0,
-      transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
-
-  const imageVariants = {
-    hidden: { 
-      scale: 1,
-      filter: "brightness(1)"
-    },
-    visible: { 
-      scale: 1.5,
-      filter: "brightness(1.1)",
-      transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    },
-    exit: { 
-      scale: 0.5,
-      filter: "brightness(0.8)",
-      transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
+      setIsNavigating(false);
+    }, 500);
   };
 
   return (
@@ -140,7 +70,7 @@ const Section2Work: React.FC = () => {
                       How TM designed a next-gen navigation system for first responders to reliably find each other within multi-story buildings—without using GPS
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/nextnav', 'https://images.unsplash.com/photo-1559028012-481c04fa702d', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/nextnav', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -176,7 +106,7 @@ const Section2Work: React.FC = () => {
                       Designing a next-generation platform that helps emergency teams coordinate and respond faster in critical situations
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/emergency', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/emergency', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -213,7 +143,7 @@ const Section2Work: React.FC = () => {
                       Creating an intuitive telehealth platform that connects patients with healthcare providers seamlessly
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/healthcare', 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/healthcare', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -250,7 +180,7 @@ const Section2Work: React.FC = () => {
                       Developing an innovative financial platform that simplifies complex transactions for both consumers and businesses
                     </p>
                     <button 
-                      onClick={(e) => handleCaseStudyClick('/work/fintech', 'https://images.unsplash.com/photo-1563986768609-322da13575f3', e)}
+                      onClick={(e) => handleCaseStudyClick('/work/fintech', e)}
                       className="inline-flex items-center text-white group"
                     >
                       <span className="mr-2">Read case study</span>
@@ -272,34 +202,6 @@ const Section2Work: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Enhanced Zoom Animation Overlay */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-            style={{ pointerEvents: 'none' }}
-          >
-            <motion.img
-              src={selectedImage}
-              initial={{ scale: 1 }}
-              animate={{ scale: 1.5 }}
-              exit={{ scale: 0.5 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 20,
-                mass: 1
-              }}
-              className="max-w-[90%] max-h-[90vh] object-contain"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };

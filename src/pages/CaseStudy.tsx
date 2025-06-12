@@ -165,7 +165,7 @@ function CaseStudy() {
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="max-w-4xl">
                   <motion.h1 
-                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white max-w-4xl"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-manrope leading-tight tracking-tight text-white max-w-4xl"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -214,7 +214,7 @@ function CaseStudy() {
                   <div className="flex items-start gap-4 md:gap-8">
                     <div className="w-16 md:w-32 h-1 bg-white mt-4 shrink-0" />
                     <div>
-                      <h2 className="text-2xl md:text-3xl font-bold mb-8">Technologies</h2>
+                      <h2 className="text-2xl md:text-3xl font-manrope mb-8">Technologies</h2>
                       <div className="flex flex-wrap gap-4">
                         {projectData.technologies.map((tech, index) => (
                           <span 
@@ -266,16 +266,16 @@ function CaseStudy() {
                   {/* Right Column - Navigation */}
                   <div className="flex flex-col justify-between">
                     <nav className="space-y-4 md:space-y-6 text-right">
-                      <a href="/" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#0093D7] transition-colors">
+                      <a href="/" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-manrope text-white hover:text-[#0093D7] transition-colors">
                         Home
                       </a>
-                      <a href="/services" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#0093D7] transition-colors">
+                      <a href="/services" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-manrope text-white hover:text-[#0093D7] transition-colors">
                         Services
                       </a>
-                      <a href="/work" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#0093D7] transition-colors">
+                      <a href="/work" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-manrope text-white hover:text-[#0093D7] transition-colors">
                         Work
                       </a>
-                      <a href="/about" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white hover:text-[#0093D7] transition-colors">
+                      <a href="/about" className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-manrope text-white hover:text-[#0093D7] transition-colors">
                         About
                       </a>
                     </nav>

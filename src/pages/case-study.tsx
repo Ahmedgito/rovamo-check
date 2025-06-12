@@ -241,7 +241,7 @@ function CaseStudyPage() {
           </section>
 
           {/* Objective Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-5 md:py-5">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="flex items-start gap-4 md:gap-8">
@@ -291,7 +291,7 @@ function CaseStudyPage() {
           </section>
 
           {/* Results Section */}
-          <section className="py-24 md:py-32">
+          <section className="py-5 md:py-5">
             <div className="mx-[2%]">
               <div className="px-4 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
                 <div className="flex items-start gap-4 md:gap-8">

@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        manrope: ['"Manrope"', 'sans-serif'],
+        sans: ['"Manrope"', 'sans-serif'],
       },
       colors: {
         blackPage: {

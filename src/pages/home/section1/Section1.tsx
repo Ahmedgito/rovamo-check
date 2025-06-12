@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Section1Hero: React.FC = () => (
-  <section className="relative min-h-[100vh] md:h-screen  font-manrope  pt-20 md:pt-72 mb-20">
+  <section className="relative min-h-[100vh] md:h-screen pt-20 md:pt-72 mb-20">
 
     {/* Desktop Version (md and up) */}
     <div className="hidden md:flex relative z-10 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between h-full">
       <div className="flex flex-col items-start md:ml-10 justify-center w-full max-w-full md:max-w-[50%]">
         <motion.h1
-          className="text-4xl font-schibsted sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight tracking-tight text-white mb-4 md:mb-8"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight tracking-tight text-white mb-4 md:mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -21,7 +21,7 @@ const Section1Hero: React.FC = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p className="text-base sm:text-lg md:text-xl font-hanken font-extralight leading-relaxed text-[#E9E9E9] mt-0 md:mt-4">
+          <p className="text-base sm:text-lg md:text-xl leading-relaxed text-[#E9E9E9] mt-0 md:mt-4">
             We are a design-led technology company...
           </p>
         </motion.div>
@@ -29,29 +29,27 @@ const Section1Hero: React.FC = () => (
     </div>
 
     {/* Mobile Version (below md) */}
-    <div className="md:hidden flex flex-col px-6 sm:px-10 relative z-10 min-h-[60vh] mb-12">
-      <div className="flex-1 flex flex-col justify-center">
-        <motion.h1
-          className="text-5xl sm:text-4xl font-manrope font-[300] leading-tight tracking-tight text-white mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Future-proofing businesses
-          <br />
-          through design
-        </motion.h1>
-        <motion.div
-          className="mb-8 font-hanken"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <p className="text-base font-hanken sm:text-lg font-manrope font-[300] leading-relaxed text-[#E9E9E9]">
-            We are a design-led technology company...
-          </p>
-        </motion.div>
-      </div>
+    <div className="md:hidden   flex-1 flex flex-col justify-center">
+      <motion.h1
+        className="text-5xl sm:text-4xl leading-tight tracking-tight text-white mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Future-proofing businesses
+        <br />
+        through design
+      </motion.h1>
+      <motion.div
+        className="mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <p className="text-base sm:text-lg leading-relaxed text-[#E9E9E9]">
+          We are a design-led technology company...
+        </p>
+      </motion.div>
     </div>
   </section>
 );

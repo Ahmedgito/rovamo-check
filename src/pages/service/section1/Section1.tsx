@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Section1Service: React.FC = () => (
-    <section className="block min-h-[10vh] z-20 font-manrope font-[300] md:h-screen py-64 md:pt-72  bg-[#E9E9E9]">
+    <section className="block min-h-[10vh] z-20 md:h-screen py-64 md:pt-72 bg-[#E9E9E9]">
      
         {/* Desktop Version (md and up) */}
-        <div className="hidden md:flex z-20 w-full font-manrope font-[300] px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between">
+        <div className="hidden md:flex z-20 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between">
             <div className="flex flex-col items-start md:ml-10 justify-center w-full max-w-full md:max-w-[70%]">
                 <motion.h1
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-manrope font-[300]  leading-tight tracking-tight text-black mb-4 md:mb-8"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl leading-tight tracking-tight text-black mb-4 md:mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -21,7 +21,7 @@ const Section1Service: React.FC = () => (
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <p className="sm:text-lg md:text-xl font-manrope font-[300] leading-relaxed text-[#171717] mt-0 md:mt-4">
+                    <p className="sm:text-lg md:text-xl leading-relaxed text-[#171717] mt-0 md:mt-4">
                         We combine strategy, design, and engineering to create transformative digital experiences that drive real business value.
                     </p>
                 </motion.div>
@@ -29,9 +29,9 @@ const Section1Service: React.FC = () => (
         </div>
 
         {/* Mobile Version (below md) */}
-        <div className="flex md:hidden flex-col justify-center text-center px-6 z-10 bg-[#E9E9E9] pt-12">
+        <div className="md:hidden flex flex-col px-6 sm:px-10 relative z-10 min-h-[60vh] mb-12">
             <motion.h1
-                className="text-4xl sm:text-4xl font-bold leading-tight tracking-tight text-black mb-4"
+                className="text-4xl sm:text-4xl leading-tight tracking-tight text-black mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -39,7 +39,7 @@ const Section1Service: React.FC = () => (
                 Our Services
             </motion.h1>
             <motion.p
-                className="text-base sm:text-lg font-extralight leading-relaxed text-[#171717] mt-2"
+                className="text-base sm:text-lg leading-relaxed text-[#171717] mt-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
