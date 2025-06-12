@@ -43,13 +43,13 @@ const Section3Work: React.FC = () => {
   return (
     <>
       {/* Featured Work Section - adjusted spacing */}
-      <section id="work" className="py-10 font-schibsted md:ml-11 md:py-48">
+      <section id="work" className="py-10 font-manrope md:ml-11 md:py-48">
         <div className="mx-[10%]">
           <div>
             {/* Section Header */}
             <div className="mb-3 md:mb-3">
               {/* Top Heading */}
-              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[84px] font-bold leading-none text-blackPage.text">
+              <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-[84px] font-[300] leading-none text-blackPage.text">
                 Explore <br /> our work
               </h2>
 
@@ -83,10 +83,10 @@ const Section3Work: React.FC = () => {
 
 
                     <h3 className="text-[#C62828] text-sm mb-2 md:mb-4">Project 1</h3>
-                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-[300] text-white mb-4 md:mb-6">
                       Safeguarding first responders with next-level location services
                     </h4>
-                    <p className="text-lg font-hanken md:text-lg font-[300] text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg font-manrope md:text-lg font-[300] text-[#E9E9E9] mb-6 md:mb-8">
                       How TM designed a next-gen navigation system for first responders to reliably find each other within multi-story buildings—without using GPS
                     </p>
                     <button 
@@ -119,10 +119,10 @@ const Section3Work: React.FC = () => {
                 <div className="w-[90%] h-[6px] bg-white mb-6 md:mb-8" />
 
                     <h3 className="text-[#0BBBA9] text-sm mb-2 md:mb-4">Project 2</h3>
-                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-[300] text-white mb-4 md:mb-6">
                       Reimagining emergency response for the digital age
                     </h4>
-                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-manrope font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Designing a next-generation platform that helps emergency teams coordinate and respond faster in critical situations
                     </p>
                     <button 
@@ -156,10 +156,10 @@ const Section3Work: React.FC = () => {
 
 
                     <h3 className="text-[#007BC9] text-sm mb-2 md:mb-4">Project 3</h3>
-                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-[300] text-white mb-4 md:mb-6">
                       Building the future of digital healthcare
                     </h4>
-                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-manrope font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Creating an intuitive telehealth platform that connects patients with healthcare providers seamlessly
                     </p>
                     <button 
@@ -193,10 +193,10 @@ const Section3Work: React.FC = () => {
 
 
                     <h3 className="text-[#0093D7] text-sm mb-2 md:mb-4">Project 4</h3>
-                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-[300] text-white mb-4 md:mb-6">
                       Revolutionizing fintech user experience
                     </h4>
-                    <p className="text-lg md:text-lg font-hanken font-extralight text-[#E9E9E9] mb-6 md:mb-8">
+                    <p className="text-lg md:text-lg font-manrope font-extralight text-[#E9E9E9] mb-6 md:mb-8">
                       Developing an innovative financial platform that simplifies complex transactions for both consumers and businesses
                     </p>
                     <button 

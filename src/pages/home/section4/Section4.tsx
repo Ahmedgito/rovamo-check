@@ -13,7 +13,7 @@ const Section4Testimonials: React.FC = () => (
     {/* Footer - adjusted spacing */}
     <motion.footer className="font-schibsted md:ml-11" {...fadeInUp}>
       <div className="mx-[10%]">
-        <motion.div className="py-16 md:py-20" {...fadeInUp}>
+        <motion.div className="py-16 md:py-10" {...fadeInUp}>
           <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32" {...fadeInUp}>
             {/* Left Column - Newsletter */}
             <motion.div {...fadeInUp}>
@@ -48,7 +48,7 @@ const Section4Testimonials: React.FC = () => (
 
             {/* Right Column - Navigation */}
             <motion.div className="flex flex-col justify-between" {...fadeInUp}>
-              <motion.nav className="space-y-4 md:space-y-2 md:-mt-44 text-left" {...fadeInUp}>
+              <motion.nav className="space-y-4 md:space-y-2 md:mt-0 text-left" {...fadeInUp}>
                 {["Home", "Services", "Work", "About"].map((label, idx) => (
                   <motion.a
                     key={label}
@@ -65,8 +65,8 @@ const Section4Testimonials: React.FC = () => (
           </motion.div>
 
           {/* Bottom Bar */}
-          <motion.div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-16 md:mt-32 pt-8 border-t border-zinc-800" {...fadeInUp}>
-            <motion.p className="text-sm font-hanken font-light font-hanken text-[#E9E9E9]" {...fadeInUp}>
+          <motion.div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-16 md:mt-10 pt-8 border-t border-zinc-800" {...fadeInUp}>
+            <motion.p className="text-sm font-hanken font-light  text-[#E9E9E9]" {...fadeInUp}>
               © Rovamo 2024. All rights reserved.
             </motion.p>
             <motion.a
