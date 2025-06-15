@@ -321,41 +321,40 @@ function CaseStudyPage() {
           </section>
 
           {/* Mission-Critical CTA Section (New) */}
-          <section className="py-24 md:py-20">
+          <section className="py-16 md:py-20">
             <div className="mx-[2%]">
-              <div className="px-8 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+              <div className="px-4 sm:px-6 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                   {/* Left Grid */}
                   <div className="flex flex-col items-start">
-                    <h2 className="text-3xl sm:text-3xl md:text-3xl lg:text-3xl mr-10 font-bold text-white mb-8">
+                    <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-white mb-6 sm:mb-8">
                       Have a mission-critical problem that needs solving?
                     </h2>
-
                     <Link
                       to="/contact"
-                      className={`md:inline-flex hidden items-center gap-3 text-base  group`}
+                      className="inline-flex items-center gap-3 text-base group mb-6 sm:mb-0"
                     >
-                       <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                      <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                         <ArrowRight className="w-4 h-4 text-black" />
                       </div>
                       <span>Contact Us</span>
-                     
                     </Link>
-
                   </div>
                   {/* Right Grid */}
                   <div className="flex flex-col items-start w-full">
-                    <h2 className="text-[4rem] md:text-[4rem] lg:text-[5rem] font-extrabold leading-none text-white mb-4" style={{ lineHeight: 1 }}>See more</h2>
-                    <div className="relative w-[80%]  bg-transparent">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-extrabold leading-none text-white mb-4" style={{ lineHeight: 1 }}>
+                      See more
+                    </h2>
+                    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[70%] bg-transparent">
                       <img
                         src={nextProject.heroImage}
                         alt={nextProject.title}
-                        className="w-[70%] h-[50%] aspect-[12/16] object-cover"
+                        className="w-full h-auto aspect-[13/16] object-cover rounded-xl"
                       />
-                      <div className="absolute bottom-0 md:-right-20 bg-transparent p-8 rounded-tl-2xl flex flex-col w-[50%] min-w-[220px]">
-                        <Link to={`/work/${nextProjectKey}`} className="text-[#FF3B3B] items-end text-2xl font-bold mb-2 hover:underline">{nextProject.client}</Link>
-                        <p className="text-white text-lg mb-2 leading-snug">{nextProject.title}</p>
-                        <Link to={`/work/${nextProjectKey}`} className="text-white font-bold hover:underline text-base mt-2">Read case study</Link>
+                      <div className="md:absolute block bottom-0  md:-right-[230px] bg-transparent p-4 sm:p-8 rounded-tl-2xl flex flex-col w-[80%] min-w-[180px] sm:w-[70%] md:w-[60%]">
+                        <Link to={`/work/${nextProjectKey}`} className="text-[#FF3B3B] items-end text-lg sm:text-2xl font-bold mb-2 hover:underline">{nextProject.client}</Link>
+                        <p className="text-white text-base sm:text-lg mb-2 leading-snug">{nextProject.title}</p>
+                        <Link to={`/work/${nextProjectKey}`} className="text-white font-bold hover:underline text-sm sm:text-base mt-2">Read case study</Link>
                       </div>
                     </div>
                   </div>
