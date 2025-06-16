@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Section1Hero: React.FC = () => (
-  <section className="relative min-h-[100vh] md:h-screen pt-20 md:pt-72 mb-20">
+  <section className="relative h-screen md:min-h-[100vh]  pt-72 md:pt-72 md:mb-20">
 
     {/* Desktop Version (md and up) */}
     <div className="hidden md:flex relative z-10 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between h-full">
@@ -29,9 +29,9 @@ const Section1Hero: React.FC = () => (
     </div>
 
     {/* Mobile Version (below md) */}
-    <div className="md:hidden   flex-1 flex flex-col justify-center">
+    <div className="md:hidden flex-1 flex flex-col justify-center px-4 py-10">
       <motion.h1
-        className="text-5xl sm:text-4xl leading-tight tracking-tight text-white mb-4"
+        className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-white mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

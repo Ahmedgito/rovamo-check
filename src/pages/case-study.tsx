@@ -321,12 +321,12 @@ function CaseStudyPage() {
           </section>
 
           {/* Mission-Critical CTA Section (New) */}
-          <section className="py-16 md:py-20">
+          <section className="py-10 md:pt-28 md:pb-10 ">
             <div className="mx-[2%]">
               <div className="px-4 sm:px-6 md:pl-[calc(4rem)] md:pr-[calc(4rem)] lg:pl-[calc(6rem)] lg:pr-[calc(6rem)]">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 items-center">
                   {/* Left Grid */}
-                  <div className="flex flex-col items-start">
+                  <div className="flex flex-col items-start md:col-span-2 w-full">
                     <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-white mb-6 sm:mb-8">
                       Have a mission-critical problem that needs solving?
                     </h2>
@@ -340,23 +340,24 @@ function CaseStudyPage() {
                       <span>Contact Us</span>
                     </Link>
                   </div>
-                  {/* Right Grid */}
-                  <div className="flex flex-col items-start w-full">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-extrabold leading-none text-white mb-4" style={{ lineHeight: 1 }}>
+                  {/* Center Grid */}
+                  <div className="flex flex-col items-start w-full md:col-span-1">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3rem] font-extrabold leading-none text-white mb-4" style={{ lineHeight: 1 }}>
                       See more
                     </h2>
-                    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[70%] bg-transparent">
+                    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:w-[100%] bg-transparent">
                       <img
                         src={nextProject.heroImage}
                         alt={nextProject.title}
-                        className="w-full h-auto aspect-[13/16] object-cover rounded-xl"
+                        className="w-full h-auto aspect-[11/16] object-cover rounded-xl"
                       />
-                      <div className="md:absolute block bottom-0  md:-right-[230px] bg-transparent p-4 sm:p-8 rounded-tl-2xl flex flex-col w-[80%] min-w-[180px] sm:w-[70%] md:w-[60%]">
-                        <Link to={`/work/${nextProjectKey}`} className="text-[#FF3B3B] items-end text-lg sm:text-2xl font-bold mb-2 hover:underline">{nextProject.client}</Link>
-                        <p className="text-white text-base sm:text-lg mb-2 leading-snug">{nextProject.title}</p>
-                        <Link to={`/work/${nextProjectKey}`} className="text-white font-bold hover:underline text-sm sm:text-base mt-2">Read case study</Link>
-                      </div>
                     </div>
+                  </div>
+                  {/* Right Grid */}
+                  <div className="flex flex-col w-full md:col-span-1 justify-end h-full">
+                    <Link to={`/work/${nextProjectKey}`} className="text-[#FF3B3B] items-end text-lg sm:text-2xl font-bold mb-2 hover:underline">{nextProject.client}</Link>
+                    <p className="text-white text-base sm:text-lg mb-2 leading-snug">{nextProject.title}</p>
+                    <Link to={`/work/${nextProjectKey}`} className="text-white font-bold hover:underline text-sm sm:text-base mt-2">Read case study</Link>
                   </div>
                 </div>
               </div>
