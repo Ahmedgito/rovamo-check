@@ -111,7 +111,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`${navTextColor} text-xl font-light text-center`}
+                className={`text-white text-xl font-light text-center`}
                 onClick={() => setIsOpen(false)}
               >
                 <span className="block text-sm" style={{ color: item.color }}>
@@ -125,7 +125,7 @@ export const Navbar: React.FC = () => {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className={`inline-flex items-center space-x-2 text-lg ${navTextColor} hover:text-[#0093D7] bg-transparent`}
+              className={`inline-flex items-center space-x-2 text-lg text-white hover:text-[#0093D7] bg-transparent`}
             >
               <span>Contact</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
