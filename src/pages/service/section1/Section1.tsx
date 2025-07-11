@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Section1Service: React.FC = () => (
-    <section className="block min-h-[10vh] z-20 md:h-screen py-64 md:pt-72 bg-[#E9E9E9]">
+    <section className="block min-h-[10vh] z-20 md:h-screen py-64 md:pt-44 bg-[#E9E9E9]">
      
         {/* Desktop Version (md and up) */}
         <div className="hidden md:flex z-20 w-full px-6 sm:px-10 md:px-[10%] flex-row items-start justify-between">
