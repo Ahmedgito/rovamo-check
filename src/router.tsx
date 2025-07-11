@@ -19,6 +19,7 @@ export function AppRoutes() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/company" element={<CompanyPage />} />
+        <Route path="/service/servicedetail" element={<CaseStudyPage />} />
         <Route path="/work/:projectId" element={<CaseStudyPage />} />
       </Routes>
     </AnimatePresence>
