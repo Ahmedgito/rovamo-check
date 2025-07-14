@@ -154,7 +154,7 @@ function CaseStudyPage() {
     <PageTransition>
       <div className="min-h-screen bg-[#171717] text-[#E9E9E9]">
         <main className="relative z-0 md:ml-14">
-          {/* Hero Section */}
+       
           {/* Hero Section */}
           <section className="pt-32 pb-16 md:pt-40  md:pb-24 bg-[#171717]">
             <div className="mx-[2%]">

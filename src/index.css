@@ -5,11 +5,11 @@
     scroll-behavior: smooth;
     font-family: 'Manrope', sans-serif;
     font-weight: 300;
-    background-color: #000000;
+    background-color: #171717;
   }
 
   body {
-    background-color: #000000;
+    background-color: #171717;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -17,7 +17,7 @@
   }
 
   #root {
-    background-color: #000000;
+    background-color: #171717;
     min-height: 100vh;
   }
 }
@@ -25,6 +25,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+}
+
+.dark {
+  --sky-400: #38bdf8;
+  --sky-500: #0ea5e9;
+}
 
 .work-item-fullpage {
   min-height: 100vh;

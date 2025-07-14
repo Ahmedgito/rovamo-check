@@ -5,6 +5,7 @@ import ServicesPage from './pages/service/services';
 import WorkPage from './pages/work/work';
 import CompanyPage from './pages/company/company';
 import CaseStudyPage from './pages/case-study';
+import ServiceDetail from './pages/service/servicedetail/Servicedetail';
 
 export function AppRoutes() {
   const location = useLocation();
@@ -20,6 +21,7 @@ export function AppRoutes() {
         <Route path="/work" element={<WorkPage />} />
         <Route path="/company" element={<CompanyPage />} />
         <Route path="/work/:projectId" element={<CaseStudyPage />} />
+        <Route path="/service/:serviceId" element={<ServiceDetail />} />
       </Routes>
     </AnimatePresence>
   );

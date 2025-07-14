@@ -26,9 +26,9 @@ export function PageTransition({ children }: PageTransitionProps) {
         }}
       >
         <div 
-          className="h-full w-full overflow-y-auto bg-black"
+          className="h-full w-full overflow-y-auto bg-[#171717]"
           style={{ 
-            backgroundColor: "#000000",
+            backgroundColor: "#171717",
             position: "relative",
             zIndex: 1
           }}
