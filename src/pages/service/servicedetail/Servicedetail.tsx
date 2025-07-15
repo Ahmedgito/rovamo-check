@@ -57,27 +57,153 @@ const ServiceDetail = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen md:ml-11 bg-[#171717] text-[#E9E9E9]">
-        {/* Hero Section */}
-        <section className="w-full">
-          <div className="bg-[#171717] pt-40 py-10 text-center text-white px-4">
-            <h1 className="mb-4 text-4xl font-bold md:text-6xl">
-              {serviceData.title}
-            </h1>
-            <p className="mx-auto max-w-2xl text-lg md:text-xl text-[#E9E9E9]/80">
-              {serviceData.objective}
+      <div className="min-h-screen md:ml-14 bg-[#171717] text-[#E9E9E9]">
+
+        <section className="pt-32 pb-16 md:pt-40  md:pb-24 bg-[#171717]">
+          <div className="mx-[2%]">
+            <div className="px-4 md:px-[4rem] lg:px-[6rem] max-w-7xl">
+              {/* Heading */}
+              <motion.h1
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                {serviceData.title}
+              </motion.h1>
+
+              {/* Sub Info */}
+              <motion.div
+                className="mt-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <div className="flex flex-wrap gap-4 text-[#E9E9E9]/60">
+                  <span>{serviceData.client}</span>
+                  <span>•</span>
+                  <span>{serviceData.type}</span>
+                  <span>•</span>
+                  <span>{serviceData.year}</span>
+                </div>
+              </motion.div>
+
+              {/* Image */}
+              <motion.div
+                className="mt-12"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <div className="overflow-hidden rounded-xl">
+                  <img
+                    src={serviceData.heroImage}
+                    alt={serviceData.title}
+                    className="w-full h-full md:h-[600px] object-cover"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        {serviceData.stats && serviceData.stats.length > 0 && (
+          <section className="bg-[#171717] max-w-7xl mx-auto border-t border-white/40">
+            <div className="px-4 md:px-[4rem] lg:px-[6rem] max-w-7xl mx-auto py-12 md:py-20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                {serviceData.stats.map((stat, index) => (
+                  <div key={index}>
+                    <h3 className="text-5xl font-bold text-white">{stat.value}</h3>
+                    <p className="mt-2 text-white/80 text-sm sm:text-base">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+
+
+        {/* Description Section */}
+        <section className="bg-[#171717] max-w-7xl mx-auto px-4 md:px-[4rem] lg:px-[6rem] py-16 md:py-24">
+
+          <h2 className="text-white text-4xl sm:text-5xl font-light mb-6">Description</h2>
+          <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12">
+
+            {/* Heading and line */}
+            <div className="flex-shrink-0">
+              <div className="w-24 h-1.5 mt-2 bg-white" />
+            </div>
+
+            {/* Text */}
+            <p className="text-white/80 text-base sm:text-lg  leading-relaxed max-w-4xl">
+              {serviceData.description}
             </p>
           </div>
-
-          <div className="md:h-[60vh] md:min-h-[500px] rounded-xl max-w-[80%] justify-center mx-auto overflow-hidden">
-            <img
-              src={serviceData.heroImage}
-              alt={serviceData.title}
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-
         </section>
+
+            
+
+      {  serviceData.firstimages && serviceData.firstimages.length > 0 && (
+      <section className=" max-w-7xl mx-auto mt-10 py-5 px-6 md:px-24 text-white">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
+        
+        {/* Text Content */}
+        <div className="flex-1">
+          <p className="text-lg leading-relaxed font-light">
+          {serviceData.firstimages[0].text}
+          </p>
+        </div>
+
+        {/* Image */}
+        <div  className="flex-1">
+          <img
+          src={serviceData.firstimages[0].src}
+            alt="AI Consulting"
+            className="rounded-3xl md:h-[300px] shadow-lg w-full object-cover"
+          />
+        </div>
+
+      </div>
+    </section>
+)}
+
+
+
+        {serviceData.steps && serviceData.steps.length > 0 && (
+          <section className="bg-[#171717] max-w-7xl mx-auto px-4 md:px-[4rem] lg:px-[6rem] py-16 md:py-24">
+            {serviceData.steps.map((item, index) => (
+              <div key={index} className="py-16">
+                <h3 className="text-white text-2xl md:text-5xl font-light flex items-center gap-4">
+                  <span className="text-white text-3xl md:text-5xl font-medium">{item.number}</span>
+                  {item.title}
+                </h3>
+
+                <div className="flex flex-col md:flex-row mt-8 items-start gap-6 md:gap-12">
+                  <div className="flex-shrink-0">
+                    <div className="w-24 h-1.5 mt-2 bg-white" />
+                  </div>
+                  <p className="text-white/80 text-sm sm:text-base leading-relaxed max-w-4xl">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </section>
+        )}
+
+        {serviceData.secondimages && serviceData.secondimages.length > 0 && (
+
+          <section className="bg-[#171717] max-w-7xl mx-auto px-4 md:px-[4rem] py-5 md:py-5">
+            {serviceData.secondimages.map((image, index) => (
+              <div key={index} className="py-5 md:py-5">
+                <img className='w-full h-full md:h-[450px] rounded-xl object-cover' src={image.src} alt={image.alt} />
+              </div>
+            ))}
+          </section>
+
+        )}
 
 
 
